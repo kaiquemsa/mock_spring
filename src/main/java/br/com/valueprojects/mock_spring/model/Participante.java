@@ -4,7 +4,7 @@ public class Participante {
 
 	private int id;
 	private String nome;
-	
+
 	public Participante(String nome) {
 		this(0, nome);
 	}
@@ -22,7 +22,10 @@ public class Participante {
 		return nome;
 	}
 
-	
+	public String getNumeroDeTelefone() {
+		return "(15)997546273";
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -41,6 +44,5 @@ public class Participante {
 			return false;
 		return true;
 	}
-	
-	
+
 }

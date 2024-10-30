@@ -1,4 +1,4 @@
-package br.com.valueprojects.service;
+package br.com.valueprojects.mock_spring.service;
 
 import java.util.List;
 
@@ -15,16 +15,13 @@ public class GameService {
     }
 
     public void finalizeGamesOfLastWeek() {
-        // Busca os jogos da última semana
         List<Game> games = gameRepository.getGamesFromLastWeek();
 
-        // Finaliza os jogos e salva no banco de dados
         for (Game game : games) {
             game.finalizeGame();
             gameRepository.save(game);
 
-            // Envia o SMS ao vencedor após salvar
-            smsService.send("Parabéns " + game.getWinner() + ", você venceu!");
+            smsService.enviarSms(null, "Parabéns " + game.getWinner() + ", você venceu!");
         }
     }
 }

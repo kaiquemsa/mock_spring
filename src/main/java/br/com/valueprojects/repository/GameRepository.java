@@ -2,7 +2,7 @@ package br.com.valueprojects.repository;
 
 import java.util.List;
 
-import br.com.valueprojects.service.Game;
+import br.com.valueprojects.mock_spring.service.Game;
 
 public interface GameRepository {
     List<Game> getGamesFromLastWeek();

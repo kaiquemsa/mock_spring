@@ -1,4 +1,4 @@
-package br.com.valueprojects.service;
+package br.com.valueprojects.mock_spring.service;
 
 import java.time.LocalDate;
 
